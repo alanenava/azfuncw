@@ -28,8 +28,8 @@ resource "azurerm_app_service_plan" "appserplanwor" {
   kind                = "FunctionApp"
 
   sku {
-    tier = "Dynamic"
-    size = "Y1"
+    tier = "Basic"
+    size = "B1"
   }
 }
 
