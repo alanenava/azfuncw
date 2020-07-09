@@ -39,6 +39,7 @@ resource "azurerm_function_app" "funcappwor" {
   resource_group_name       = azurerm_resource_group.resowor.name
   app_service_plan_id       = azurerm_app_service_plan.appserplanwor.id
   storage_connection_string = azurerm_storage_account.example.primary_connection_string
+    version = "~3"
 }
 
 
