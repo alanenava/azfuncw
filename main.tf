@@ -40,6 +40,12 @@ resource "azurerm_function_app" "funcappwor" {
   app_service_plan_id       = azurerm_app_service_plan.appserplanwor.id
   storage_connection_string = azurerm_storage_account.example.primary_connection_string
     version = "~3"
+    
+    app_settings{
+        FUNCTIONS_WORKER_RUNTIME             = "node"
+        WEBSITE_NODE_DEFAULT_VERSION         = "~12"
+        WEBSITE_RUN_FROM_PACKAGE              = "1"
+        }
 }
 
 
