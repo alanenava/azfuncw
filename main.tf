@@ -34,7 +34,7 @@ resource "azurerm_app_service_plan" "appserplanwor" {
   }
 }
 
-resource "azurem_app_service" "azureappserv"{
+resource "azurerm_app_service" "azureappserv"{
 name                    ="appservicetestwor"
 location                = azurerm_resource_group.resowor.location
 resource_group_name     = azurerm_resource_group.resowor.name
