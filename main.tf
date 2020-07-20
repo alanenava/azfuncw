@@ -25,12 +25,25 @@ resource "azurerm_app_service_plan" "appserplanwor" {
   name                = "Appservplanwork"
   location            = azurerm_resource_group.resowor.location
   resource_group_name = azurerm_resource_group.resowor.name
-  kind                = "FunctionApp"
+  kind                = "linux"
+  reserved            = true
 
   sku {
     tier = "Basic"
     size = "B1"
   }
+}
+
+resource "azurem_app_service" "azureappserv"{
+name                    ="appservicetestwor"
+location                = azurerm_resource_group.resowor.location
+resource_group_name     = azurerm_resource_group.resowor.name
+app_service_plan_id     = azurerm_app_service_plan.appserplanwor.id
+    
+site_config{
+    linux_fx_version    = "PHP|7.3"
+    scm_type            ="LocalGit"
+    }
 }
 
 resource "azurerm_function_app" "funcappwor" {
