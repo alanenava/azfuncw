@@ -2,8 +2,8 @@ provider "azurerm" {
     version = "~>1.32.0"
     use_msi = true
     subscription_id = "2aba0967-5f05-4c8f-8a41-d9d7988af4ea"
-    client_id       = "b29d733a-01ce-464e-9c56-62ef443c633a"
-    client_secret   = "bc776c79-15fa-4a3b-8b80-d1b68eb1bf2b"
+    client_id       = "bfd83f72-0497-4c68-970e-1f72357787dc"
+    client_secret   = "R.L~0mb9KIF.QWFLjiWIQ-V7ZFhJDTXCKi"
     tenant_id       = "e81ea96d-ffd8-4749-9585-84a65d47b0f7"
 
 }
